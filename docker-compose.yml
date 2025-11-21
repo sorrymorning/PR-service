@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: prsvc
+      POSTGRES_PASSWORD: prsvc
+      POSTGRES_DB: prsvc
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
